@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { CounterComponentIncrement, CounterComponentDecrement, Reset, selectCount } from '../../store/state-counter';
@@ -7,6 +7,7 @@ import { CounterComponentIncrement, CounterComponentDecrement, Reset, selectCoun
   selector: 'state-counter',
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CounterComponent implements OnInit {
 
